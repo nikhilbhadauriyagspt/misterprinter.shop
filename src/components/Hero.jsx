@@ -14,37 +14,37 @@ import banner4 from "@/assets/bannerr/banner4.jpg";
 
 const slides = [
   {
-    id: "PRO-01",
-    tag: "INDUSTRIAL DESIGN",
-    title: "The Standard",
-    highlight: "Of Precision.",
-    desc: "HP Z-Series: Performance that defies logic. Built for the most demanding computational workflows in the world.",
+    id: "ENT-01",
+    tag: "HIGH-SPEED OUTPUT",
+    title: "Enterprise",
+    highlight: "Velocity.",
+    desc: "HP LaserJet Enterprise. Engineered for high-load cycles and unmatched monochrome precision in demanding environments.",
     image: banner1,
-    link: "/category/laptop-computers",
-    specs: ["ECC MEMORY", "ISV CERTIFIED", "Z-DNA"]
+    link: "/category/printers",
+    specs: ["65 PPM", "DUAL-HEAD SCAN", "BIO-TONER"]
   },
   {
-    id: "GAM-02",
-    tag: "ELITE PERFORMANCE",
-    title: "Sovereign",
-    highlight: "Intelligence.",
-    desc: "Unrivaled cooling. Unmatched frames. The Omen ecosystem is designed for those who play to dominate, not just compete.",
+    id: "PRO-02",
+    tag: "TECHNICAL PRECISION",
+    title: "Master",
+    highlight: "Graphics.",
+    desc: "DesignJet Series. Delivering gallery-grade color accuracy and large-format reliability for architectural and creative firms.",
     image: banner2,
-    link: "/category/laptop-computers",
-    specs: ["OLED 240HZ", "CRYOMASTER", "AI-TUNED"]
+    link: "/category/printers",
+    specs: ["2400 DPI", "10-INK SYSTEM", "WIDE-FORMAT"]
   },
   {
-    id: "MOB-03",
-    tag: "PREMIUM MOBILITY",
-    title: "Sculpted",
-    highlight: "Excellence.",
-    desc: "Spectre x360. Where jewelry-grade craftsmanship meets professional-grade power. The ultimate executive companion.",
+    id: "ECO-03",
+    tag: "SUSTAINABLE NODES",
+    title: "Infinite",
+    highlight: "Efficiency.",
+    desc: "HP Smart Tank. Cartridge-free high-capacity printing infrastructure designed for the modern, eco-conscious workspace.",
     image: banner3,
-    link: "/category/laptop-computers",
-    specs: ["CNC CHASSIS", "4K HDR", "22H CHARGE"]
+    link: "/category/printers",
+    specs: ["2YR INK INCL.", "WI-FI SELF-HEAL", "ZERO WASTE"]
   },
   {
-    id: "ENT-04",
+    id: "SEC-04",
     tag: "INFRASTRUCTURE",
     title: "Secure",
     highlight: "Workflows.",
@@ -158,7 +158,7 @@ export default function Hero() {
                      <div className="h-12 w-px bg-white/10" />
                      <div className="flex items-center gap-4">
                         <div className="h-10 w-10 bg-white p-1.5 flex items-center justify-center">
-                           <img src="/brands/hp.jpg" alt="HP" className="w-full h-full object-contain" />
+                           <img src="/brands/hp.png" alt="HP" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex flex-col">
                            <span className="text-[10px] font-black text-white/40 uppercase tracking-widest leading-none">Official</span>
@@ -171,37 +171,89 @@ export default function Hero() {
             </AnimatePresence>
           </div>
 
-          {/* Right Action/Spec Panel */}
-          <div className="hidden min-[1400px]:flex flex-col w-[400px] border-l border-white/5 justify-center p-12 bg-black/10 backdrop-blur-xl">
-             <div className="space-y-12">
+          {/* Right Action/Spec Panel - HIGH FIDELITY HUD REDESIGN */}
+          <div className="hidden min-[1400px]:flex flex-col w-[480px] border-l border-white/10 justify-center p-16 bg-slate-950/40 backdrop-blur-3xl relative overflow-hidden group/panel">
+             
+             {/* Dynamic Background Scanning Line */}
+             <motion.div 
+               animate={{ y: ['-100%', '100%'] }}
+               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+               className="absolute inset-x-0 h-40 bg-gradient-to-b from-transparent via-blue-600/5 to-transparent pointer-events-none z-0"
+             />
+
+             <div className="space-y-16 relative z-10">
                 <div>
-                   <p className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em] mb-8">CORE SPECIFICATIONS</p>
+                   <div className="flex items-center justify-between mb-12">
+                      <div className="flex items-center gap-4">
+                         <div className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse shadow-[0_0_10px_rgba(37,99,235,0.8)]" />
+                         <p className="text-[10px] font-black text-blue-500 uppercase tracking-[0.6em]">System Diagnostics</p>
+                      </div>
+                   </div>
+                   
                    <AnimatePresence mode="wait">
-                     <div className="space-y-4">
+                     <div className="space-y-5">
                         {slides[current].specs.map((spec, i) => (
                           <motion.div 
                             key={spec + current}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 * i }}
-                            className="p-6 border border-white/5 bg-white/5 flex items-center justify-between group hover:bg-blue-600 transition-all duration-500"
+                            initial={{ opacity: 0, x: 40 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.1 * i, ease: [0.16, 1, 0.3, 1] }}
+                            className="group/item relative"
                           >
-                             <span className="text-xs font-black text-white uppercase tracking-widest">{spec}</span>
-                             <div className="h-2 w-2 bg-blue-600 group-hover:bg-white transition-colors" />
+                             {/* Technical Card Component */}
+                             <div className="relative p-7 bg-white/[0.03] border border-white/5 group-hover/item:border-blue-600/50 transition-all duration-500 overflow-hidden">
+                                
+                                {/* Background Highlight */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/0 to-blue-600/0 group-hover/item:via-blue-600/[0.05] transition-all duration-700" />
+
+                                <div className="relative flex items-center justify-between">
+                                   <div className="flex items-center gap-8">
+                                      <div className="flex flex-col">
+                                         <span className="text-[8px] font-mono text-blue-600 mb-1">NODE_0{i+1}</span>
+                                         <span className="text-[14px] font-black text-white uppercase tracking-[0.2em]">{spec}</span>
+                                      </div>
+                                   </div>
+                                   
+                                   <div className="flex flex-col items-end">
+                                      <Activity size={14} className="text-blue-600/20 group-hover/item:text-blue-600 group-hover/item:animate-pulse transition-colors" />
+                                      <span className="text-[7px] font-black text-white/10 uppercase mt-2 tracking-widest">Verified</span>
+                                   </div>
+                                </div>
+
+                                {/* Micro HUD Accent Brackets */}
+                                <div className="absolute top-0 right-0 w-2 h-[1px] bg-blue-600 opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                <div className="absolute top-0 right-0 w-[1px] h-2 bg-blue-600 opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                             </div>
                           </motion.div>
                         ))}
                      </div>
                    </AnimatePresence>
                 </div>
 
-                <div className="pt-12 border-t border-white/5">
+                {/* Global Command Interface */}
+                <div className="pt-16 border-t border-white/10">
+                   <div className="flex items-center justify-between mb-8 px-2">
+                      <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.4em]">Inventory Query Hub</span>
+                      <Terminal size={12} className="text-white/10" />
+                   </div>
+                   
                    <button 
                      onClick={openSearch}
-                     className="w-full h-20 border border-white/10 flex items-center justify-between px-8 text-white hover:bg-white hover:text-black transition-all group"
+                     className="w-full h-20 bg-white text-slate-900 hover:bg-blue-600 hover:text-white transition-all duration-700 rounded-none flex items-center justify-between px-10 group shadow-[0_30px_60px_rgba(0,0,0,0.3)] relative overflow-hidden"
                    >
-                      <span className="text-xs font-black uppercase tracking-widest">Global Search</span>
-                      <Search size={24} className="group-hover:rotate-90 transition-transform" />
+                      <div className="absolute inset-0 bg-slate-950 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                      
+                      <div className="relative z-10 flex items-center gap-5">
+                         <div className="h-2 w-2 rounded-full bg-blue-600 group-hover:bg-blue-400 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+                         <span className="text-[11px] font-black uppercase tracking-[0.4em]">Execute Database Search</span>
+                      </div>
+                      
+                      <div className="relative z-10 h-10 w-10 rounded-full border border-slate-200 group-hover:border-white/20 flex items-center justify-center group-hover:rotate-90 transition-all duration-700">
+                         <Search size={20} strokeWidth={2.5} />
+                      </div>
                    </button>
+                   
+                   <p className="mt-6 text-[8px] font-mono text-white/10 uppercase tracking-[0.5em] text-center">Protocol: AES_256 // END_TO_END_ENCRYPTION</p>
                 </div>
              </div>
           </div>

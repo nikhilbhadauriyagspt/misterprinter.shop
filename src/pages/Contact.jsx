@@ -96,7 +96,7 @@ export default function Contact() {
               <div className="absolute top-0 right-0 p-6 opacity-10">
                  <Headphones size={80} strokeWidth={1} />
               </div>
-              <img src="/brands/hp.jpg" alt="HP" className="h-8 w-auto object-contain rounded mb-6 invert grayscale brightness-200" />
+              <img src="/brands/hp.png" alt="HP" className="h-8 w-auto object-contain rounded mb-6 invert grayscale brightness-200" />
               <h4 className="text-lg font-black uppercase tracking-tight mb-2">AUTHORIZED PARTNER</h4>
               <p className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] leading-relaxed">Verified technical support & genuine deployment node.</p>
             </div>

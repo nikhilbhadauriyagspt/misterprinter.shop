@@ -31,8 +31,8 @@ const faqData = [
     category: "Products & Availability",
     questions: [
       { q: "Are your products genuine and covered under warranty?", a: "Yes. All products are 100% genuine and come with an official manufacturer's warranty." },
-      { q: "Do you sell only HP products or other brands too?", a: "We are an Authorized HP Partner, but we also sell laptops, printers, and accessories from other trusted brands." },
-      { q: "How can I choose the right laptop or printer?", a: "You can contact our expert support for personalized buying recommendations based on your usage and budget." },
+      { q: "Do you sell only HP products or other brands too?", a: "We are an Authorized HP Partner, but we also sell printers and accessories from other trusted brands." },
+      { q: "How can I choose the right printer?", a: "You can contact our expert support for personalized buying recommendations based on your usage and budget." },
       { q: "What if an item is out of stock?", a: "You can join the Back in Stock alert on the product page, and we’ll notify you as soon as it becomes available." },
       { q: "Can I compare products before buying?", a: "Yes. Use our Compare feature to check specs, features, and pricing side by side." }
     ]
@@ -42,7 +42,7 @@ const faqData = [
     questions: [
       { q: "Do your products come with a manufacturer's warranty?", a: "Yes. Every product includes full brand-backed warranty with repair/replacement coverage." },
       { q: "How do I claim warranty for HP products?", a: "You can contact HP Support directly or reach out to us for guidance and warranty assistance." },
-      { q: "What if my laptop or printer arrives damaged?", a: "Contact us within 48 hours with photos/videos. We’ll arrange a replacement or initiate a claim." },
+      { q: "What if my printer arrives damaged?", a: "Contact us within 48 hours with photos/videos. We’ll arrange a replacement or initiate a claim." },
       { q: "Do you provide technical support?", a: "Yes. We offer setup help, troubleshooting, installation support, and product-related guidance." },
       { q: "How do I contact customer support?", a: "You can reach us via email, chat, or our contact form. Support is available 7 days a week." }
     ]
@@ -64,15 +64,6 @@ const faqData = [
       { q: "I forgot my password — what should I do?", a: "Use the Forgot Password option to reset it instantly via email." },
       { q: "How can I update my profile details?", a: "Go to My Account → Profile Info to edit your name, address, phone number, etc." },
       { q: "Can I view my past orders?", a: "Yes. All previous orders are listed in your Order History." }
-    ]
-  },
-  {
-    category: "Laptop & Computer FAQs",
-    questions: [
-      { q: "Do laptops come with pre-installed software?", a: "Most laptops come with Windows OS pre-installed. Additional software depends on the brand and model." },
-      { q: "Can I upgrade RAM or storage?", a: "Yes, many models support upgrades. Contact our support to confirm compatibility." },
-      { q: "Do you offer setup or installation help?", a: "Yes. We help with initial setup, OS updates, driver installation, and data transfer." },
-      { q: "What should I do if my laptop feels slow?", a: "We recommend checking storage space, updating software, or contacting support for optimization help." }
     ]
   },
   {

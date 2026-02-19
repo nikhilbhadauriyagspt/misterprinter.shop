@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
-import { ShieldCheck, Zap, Heart, Globe, Award, Users, ChevronRight, Laptop, Printer, Package, Wrench, Leaf, MapPin, Mail, Phone, ArrowUpRight, ArrowRight, Activity, Terminal, Layers, Box, Sparkles, Monitor } from 'lucide-react';
+import { ShieldCheck, Zap, Heart, Globe, Award, Users, ChevronRight, Printer, Package, Wrench, Leaf, MapPin, Mail, Phone, ArrowUpRight, ArrowRight, Activity, Terminal, Layers, Box, Sparkles, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import banner1 from "@/assets/bannerr/banner1.jpg";
 import { cn } from '../lib/utils';
@@ -36,7 +36,7 @@ export default function About() {
             >
               <div className="flex items-center gap-3 mb-8">
                  <div className="flex items-center gap-2.5 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg">
-                    <img src="/brands/hp.jpg" alt="HP" className="h-4 w-auto object-contain rounded brightness-200" />
+                    <img src="/brands/hp.png" alt="HP" className="h-4 w-auto object-contain rounded brightness-200" />
                     <span className="text-[10px] font-black uppercase tracking-[0.2em]">Authorized Partner</span>
                  </div>
                  <div className="h-px w-8 bg-white/10" />
@@ -130,7 +130,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { icon: Laptop, title: "Computing Nodes", sub: "WORKSTATIONS" },
+              { icon: Monitor, title: "Precision Output", sub: "PRO PRINTING" },
               { icon: Printer, title: "Print Infra", sub: "INFRASTRUCTURE" },
               { icon: Package, title: "Supply Chain", sub: "CONSUMABLES" },
               { icon: Terminal, title: "Tech Strategy", sub: "CONSULTING" },

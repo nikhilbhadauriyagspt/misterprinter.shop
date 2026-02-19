@@ -8,7 +8,6 @@ import {
   User, 
   Heart, 
   ChevronDown,  X,
-  Laptop,
   Smartphone,
   Cpu,
   Monitor,
@@ -89,12 +88,20 @@ export default function Header() {
         try {
           const pRes = await fetch(`${API_BASE_URL}/products?search=${encodeURIComponent(searchQuery)}&limit=6`);
           const pData = await pRes.json();
+          
+          const filteredProds = (pData.status === 'success' ? pData.data : []).filter(p => 
+            !p.name.toLowerCase().includes('laptop') && 
+            !p.name.toLowerCase().includes('macbook') && 
+            !p.name.toLowerCase().includes('notebook') &&
+            !p.name.toLowerCase().includes('chromebook')
+          );
+
           const matchedCats = categories.flatMap(parent => [parent, ...(parent.children || [])])
             .filter(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()))
             .slice(0, 4);
 
           setSuggestions({
-            products: pData.status === 'success' ? pData.data : [],
+            products: filteredProds,
             categories: matchedCats
           });
         } catch (err) {
@@ -126,8 +133,14 @@ export default function Header() {
       .then(res => res.json())
       .then(data => {
         if(data.status === 'success') {
-          setCategories(data.data);
-          if (data.data.length > 0) setHoveredParent(data.data[0].id);
+          // Filter out laptop related categories
+          const filtered = data.data.filter(cat => 
+            !cat.name.toLowerCase().includes('laptop') && 
+            !cat.slug.toLowerCase().includes('laptop') &&
+            !cat.name.toLowerCase().includes('chromebook')
+          );
+          setCategories(filtered);
+          if (filtered.length > 0) setHoveredParent(filtered[0].id);
         }
       });
 
@@ -220,7 +233,7 @@ export default function Header() {
               {/* HP BRANDING BADGE */}
               <div className="hidden min-[1550px]:flex items-center gap-4 py-2 px-5 bg-slate-50/50 rounded-2xl border border-slate-100 mr-2">
                  <div className="h-9 w-9 bg-white p-1.5 flex items-center justify-center rounded-xl shadow-sm border border-slate-100">
-                    <img src="/brands/hp.jpg" alt="HP" className="w-full h-full object-contain" />
+                    <img src="/brands/hp.png" alt="HP" className="w-full h-full object-contain" />
                  </div>
                  <div className="flex flex-col leading-none">
                     <span className="text-[7px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Official</span>
@@ -344,7 +357,7 @@ export default function Header() {
                              "h-8 w-8 rounded-lg flex items-center justify-center transition-all duration-500",
                              String(hoveredParent) === String(parent.id) ? "bg-blue-600 text-white shadow-lg" : "bg-slate-100 text-slate-400"
                            )}>
-                              {parent.name.toLowerCase().includes('laptop') ? <Laptop size={16} /> : parent.name.toLowerCase().includes('printer') ? <Monitor size={16} /> : <Cpu size={16} />}
+                              {parent.name.toLowerCase().includes('printer') ? <Monitor size={16} /> : <Cpu size={16} />}
                            </div>
                            <span className="text-[12px] font-black uppercase tracking-widest">{parent.name}</span>
                         </div>

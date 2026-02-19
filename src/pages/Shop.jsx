@@ -50,7 +50,18 @@ export default function Shop() {
   };
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/categories`).then(res => res.json()).then(d => setCategories(d.data));
+    fetch(`${API_BASE_URL}/categories`)
+      .then(res => res.json())
+      .then(d => {
+        if (d.status === 'success') {
+          const filtered = d.data.filter(cat => 
+            !cat.name.toLowerCase().includes('laptop') && 
+            !cat.slug.toLowerCase().includes('laptop') &&
+            !cat.name.toLowerCase().includes('chromebook')
+          );
+          setCategories(filtered);
+        }
+      });
     fetch(`${API_BASE_URL}/brands`).then(res => res.json()).then(d => setBrands(d.data));
   }, []);
 
@@ -72,8 +83,14 @@ export default function Shop() {
       .then(res => res.json())
       .then(data => {
         if (data.status === 'success') {
-          setProducts(data.data);
-          setTotal(data.meta.total);
+          const filteredProducts = data.data.filter(p => 
+            !p.name.toLowerCase().includes('laptop') && 
+            !p.name.toLowerCase().includes('macbook') && 
+            !p.name.toLowerCase().includes('notebook') &&
+            !p.name.toLowerCase().includes('chromebook')
+          );
+          setProducts(filteredProducts);
+          setTotal(filteredProducts.length);
         }
         setLoading(false);
       })

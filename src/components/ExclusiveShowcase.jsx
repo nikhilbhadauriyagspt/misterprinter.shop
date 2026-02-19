@@ -4,17 +4,17 @@ import { Button } from "@/components/ui/button";
 
 const exclusiveProducts = [
   {
-    name: "PrimeBook Ultra X",
-    desc: "The world's most powerful 14-inch workstation. Engineered for 8K video editing and heavy 3D workflows.",
-    price: "$3,299",
-    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1000&auto=format&fit=crop",
+    name: "Enterprise LaserJet X",
+    desc: "The ultimate monochrome workhorse. Engineered for 60ppm output and high-fidelity archival grade printing.",
+    price: "$1,899",
+    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1000&auto=format&fit=crop",
     accent: "from-blue-600 to-indigo-600"
   },
   {
-    name: "Zenith Liquid G1",
-    desc: "First laptop with integrated liquid-vapor cooling. Overclocked RTX 4090 for the ultimate gaming edge.",
-    price: "$4,499",
-    image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=1000&auto=format&fit=crop",
+    name: "Precision Color G1",
+    desc: "Large-format professional plotter. Unmatched color accuracy for architectural and creative visual output.",
+    price: "$2,499",
+    image: "https://images.unsplash.com/photo-1563223552-30d01ffa3e00?q=80&w=1000&auto=format&fit=crop",
     accent: "from-purple-600 to-rose-600"
   }
 ];

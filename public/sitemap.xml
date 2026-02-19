@@ -10,8 +10,6 @@
   <url><loc>https://primefixsolutions.co/shop?category=printers</loc><priority>0.8</priority></url>
   <url><loc>https://primefixsolutions.co/shop?category=inkjet-printers</loc><priority>0.7</priority></url>
   <url><loc>https://primefixsolutions.co/shop?category=laser-printers</loc><priority>0.7</priority></url>
-  <url><loc>https://primefixsolutions.co/shop?category=laptop-computers</loc><priority>0.8</priority></url>
-  <url><loc>https://primefixsolutions.co/shop?category=pc-laptops</loc><priority>0.7</priority></url>
 
   <!-- Products (50+) -->
   <url><loc>https://primefixsolutions.co/product/hp-smart-tank-7001-wireless-all-in-one-cartridge-free-ink-tank-color-printer-with-up-to-2-years-of-ink-included-28b49a</loc><priority>0.6</priority></url>
@@ -61,8 +59,4 @@
   <url><loc>https://primefixsolutions.co/product/epson-fx-890ii-printer-bw-dot-matrix-10-in-width-240-x-144-dpi-9-pin-up-to-738-charsec-parallel-usb</loc><priority>0.6</priority></url>
   <url><loc>https://primefixsolutions.co/product/hp-laserjet-m712n-monochrome-laser-printer</loc><priority>0.6</priority></url>
   <url><loc>https://primefixsolutions.co/product/lexmark-ms821n-laser-monochrome-printer</loc><priority>0.6</priority></url>
-  <url><loc>https://primefixsolutions.co/product/hp-elitebook-840-g5-refurbished-laptop-14-screen-intel-core-i5-16gb-memory-512gb-solid-state-drive-windows-11-pro-1</loc><priority>0.6</priority></url>
-  <url><loc>https://primefixsolutions.co/product/dell-latitude-7490-refurbished-laptop-14-screen-intel-core-i7-16gb-memory-512gb-solid-state-drive-windows-10-pro-black</loc><priority>0.6</priority></url>
-  <url><loc>https://primefixsolutions.co/product/hp-elitebook-840-g6-refurbished-laptop-14-screen-intel-core-i5-16gb-memory-512gb-solid-state-drive-windows-11-pro-1</loc><priority>0.6</priority></url>
-  <url><loc>https://primefixsolutions.co/product/hp-elitebook-830-g6-refurbished-laptop-133-screen-intel-core-i7-32gb-memory-1tb-solid-state-drive-windows-11-pro</loc><priority>0.6</priority></url>
 </urlset>

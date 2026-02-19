@@ -17,7 +17,13 @@ export default function Footer() {
       .then(data => {
         if (data.status === 'success') {
           const flat = data.data.flatMap(cat => [cat, ...(cat.children || [])]);
-          const unique = Array.from(new Map(flat.map(item => [item.slug, item])).values()).slice(0, 6);
+          const unique = Array.from(new Map(flat.map(item => [item.slug, item])).values())
+            .filter(cat => 
+              !cat.name.toLowerCase().includes('laptop') && 
+              !cat.slug.toLowerCase().includes('laptop') &&
+              !cat.name.toLowerCase().includes('chromebook')
+            )
+            .slice(0, 6);
           setCategories(unique);
         }
       });
@@ -70,7 +76,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
                <div className="flex items-center gap-3 px-5 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm">
-                  <img src="/brands/hp.jpg" alt="HP" className="h-5 w-auto object-contain rounded-full" />
+                  <img src="/brands/hp.png" alt="HP" className="h-5 w-auto object-contain rounded-full" />
                   <span className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-900">Authorized Partner</span>
                </div>
                <div className="flex items-center gap-3 px-5 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm">

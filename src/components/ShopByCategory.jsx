@@ -8,8 +8,19 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function ShopByCategory({ categories = [] }) {
-  // Flatten categories to show all sub-categories - LOGIC PRESERVED
-  const subcategories = categories.flatMap(parent => parent.children || []);
+  // Flatten categories to show all sub-categories and filter out laptops
+  const subcategories = categories
+    .filter(parent => 
+      !parent.name.toLowerCase().includes('laptop') && 
+      !parent.slug.toLowerCase().includes('laptop') &&
+      !parent.name.toLowerCase().includes('chromebook')
+    )
+    .flatMap(parent => parent.children || [])
+    .filter(sub => 
+      !sub.name.toLowerCase().includes('laptop') && 
+      !sub.slug.toLowerCase().includes('laptop') &&
+      !sub.name.toLowerCase().includes('chromebook')
+    );
 
   const getImagePath = (image) => {
     if (image) return `/${image}`;

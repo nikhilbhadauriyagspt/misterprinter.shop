@@ -20,7 +20,6 @@ import { cn } from "../lib/utils";
 export default function Home() {
   const [data, setData] = useState({
     all: [],
-    laptops: [],
     printers: [],
     accessories: [],
     mixedArrivals: [],
@@ -39,13 +38,13 @@ export default function Home() {
         ]);
 
         if (prodRes.status === 'success' && catRes.status === 'success' && brandRes.status === 'success') {
-          const all = prodRes.data;
-          
-          const laptops = all.filter(p => 
-            p.name.toLowerCase().includes('laptop') || 
-            p.name.toLowerCase().includes('macbook') || 
-            p.name.toLowerCase().includes('notebook')
+          const all = prodRes.data.filter(p => 
+            !p.name.toLowerCase().includes('laptop') && 
+            !p.name.toLowerCase().includes('macbook') && 
+            !p.name.toLowerCase().includes('notebook') &&
+            !p.name.toLowerCase().includes('chromebook')
           );
+          
           const printers = all.filter(p => 
             p.name.toLowerCase().includes('printer') || 
             p.name.toLowerCase().includes('laserjet') || 
@@ -62,7 +61,6 @@ export default function Home() {
 
           setData({
             all,
-            laptops,
             printers,
             accessories,
             mixedArrivals: shuffled,
@@ -83,8 +81,8 @@ export default function Home() {
   return (
     <div className="bg-white font-snpro overflow-x-hidden text-slate-900">
       <SEO 
-        title="Authorized HP Partner | Premium Laptops & Printers" 
-        description="Premium destination for authorized HP laptops, printers, and tech accessories. Delivering excellence in tech solutions across the USA."
+        title="Authorized HP Partner | Premium Printers & Hardware" 
+        description="Premium destination for authorized HP printers, precision tech, and essential accessories. Delivering excellence in tech solutions across the USA."
       />
       
       <Hero />
@@ -94,13 +92,6 @@ export default function Home() {
       <BestSellers products={data.all} />
       <BrandShowcase brands={data.brands} />
       <ProductGrid products={data.mixedArrivals.slice(0, 30)} />
-
-      <CategorySlider 
-        title="Premium Laptops" 
-        subtitle="Workstation & Gaming" 
-        products={data.laptops} 
-        bgColor="bg-slate-50/50"
-      />
 
       <CategorySlider 
         title="Office Printers" 

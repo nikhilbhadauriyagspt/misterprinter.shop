@@ -139,8 +139,7 @@ export default function BestSellers({ products = [] }) {
           ))}
         </Swiper>
 
-        <div className="mt-20 flex items-center justify-between border-t border-slate-100 pt-10">
-           <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em]">End of Featured Listings</p>
+        <div className="mt-20 flex items-center justify-end border-t border-slate-100 pt-10">
            <Link to="/shop" className="text-[10px] font-black text-slate-900 hover:text-blue-600 uppercase tracking-widest transition-colors flex items-center gap-2">
               Browse Entire Store <ArrowRight size={14} />
            </Link>
