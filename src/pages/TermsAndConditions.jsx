@@ -10,7 +10,7 @@ export default function TermsAndConditions() {
     >
       <h2>AGREEMENT TO OUR LEGAL TERMS</h2>
       <p>
-        We are EASYMYPRINT LLC ("Company," "we," "us," "our"), a company registered in North Carolina, United States at 4904 Alpinis Dr, Raleigh, NC 27616.
+        We are EASYMYPRINT LLC ("Company," "we," "us," "our"), a company registered in North Carolina, United States at 722 N West St, Raleigh, NC 27603.
       </p>
       <p>
         We operate the website <a href="http://easymyprint.shop/">http://easymyprint.shop/</a> (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
@@ -19,7 +19,7 @@ export default function TermsAndConditions() {
         EASYMYPRINT is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.
       </p>
       <p>
-        You can contact us by email at <a href="mailto:info@easymyprint.shop">info@easymyprint.shop</a>, or by mail to 4904 Alpinis Dr, Raleigh, NC 27616, United States.
+        You can contact us by email at <a href="mailto:info@easymyprint.shop">info@easymyprint.shop</a>, or by mail to 722 N West St, Raleigh, NC 27603, United States.
       </p>
       <p>
         These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and EASYMYPRINT LLC, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
@@ -201,8 +201,8 @@ export default function TermsAndConditions() {
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 my-8 not-prose">
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2 uppercase tracking-tighter">
           <p className="text-slate-900 font-black">EASYMYPRINT LLC</p>
-          <p>4904 Alpinis Dr</p>
-          <p>Raleigh, NC 27616</p>
+          <p>722 N West St</p>
+          <p>Raleigh, NC 27603</p>
           <p>United States</p>
           <p className="pt-4 text-blue-600 font-black lowercase">Email: info@easymyprint.shop</p>
         </address>
@@ -210,4 +210,5 @@ export default function TermsAndConditions() {
     </PolicyLayout>
   );
 }
+
 

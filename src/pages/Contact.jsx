@@ -92,20 +92,40 @@ export default function Contact() {
                 <MapPin size={24} strokeWidth={1.5} />
               </div>
               <p className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-3">Office Location</p>
-              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight group-hover:text-blue-600 transition-colors">4904 Alpinis Dr <br/> Raleigh, NC 27616</h4>
+              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight group-hover:text-blue-600 transition-colors">722 N West St <br/> Raleigh, NC 27603</h4>
             </div>
 
-            <div className="p-12 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden shadow-2xl group">
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                 <Headphones size={100} strokeWidth={1} />
+            <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-white to-blue-50 border border-blue-100 relative overflow-hidden shadow-[0_30px_60px_rgba(37,99,235,0.04)] group transition-all duration-1000 hover:border-blue-600">
+              {/* Background Decor */}
+              <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                 <ShieldCheck size={100} strokeWidth={1} className="text-blue-600" />
               </div>
-              <div className="flex items-center gap-3 mb-8">
-                 <img src="/brands/hp.png" alt="HP" className="h-6 w-auto object-contain brightness-200" />
-                 <div className="h-4 w-px bg-white/20" />
-                 <span className="text-[9px] font-black text-blue-400 uppercase tracking-[0.3em]">Official Status</span>
+              
+              <div className="relative z-10 flex flex-col items-center text-center">
+                {/* Logo Pedestal */}
+                <div className="h-20 w-20 bg-white rounded-2xl shadow-xl border border-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-700 group-hover:rotate-3">
+                   <img src="/brands/hp.png" alt="HP" className="h-10 w-auto object-contain" />
+                </div>
+                
+                {/* Status Tag */}
+                <div className="flex items-center justify-center gap-2 mb-4">
+                   <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
+                   <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Official Status</span>
+                   <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
+                </div>
+                
+                {/* Headings */}
+                <h4 className="text-xl font-black text-slate-900 uppercase tracking-tighter mb-3 leading-none">
+                  AUTHORIZED <br/> <span className="text-blue-600 italic">PARTNER.</span>
+                </h4>
+                
+                {/* Verified Badge Icon */}
+                <div className="mt-6 pt-5 border-t border-blue-100 w-full flex justify-center">
+                   <div className="flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg shadow-blue-600/20">
+                      <CheckCircle2 size={10} strokeWidth={3} /> Verified Merchant
+                   </div>
+                </div>
               </div>
-              <h4 className="text-2xl font-black uppercase tracking-tight mb-4">AUTHORIZED <br/> PARTNER</h4>
-              <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">Exclusive support & authentic hardware deployment center.</p>
             </div>
           </div>
 
@@ -214,4 +234,5 @@ export default function Contact() {
     </div>
   );
 }
+
 

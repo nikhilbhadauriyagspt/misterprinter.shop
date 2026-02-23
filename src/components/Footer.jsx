@@ -73,7 +73,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-slate-500 text-lg font-bold leading-relaxed max-w-md">
-              Authorized HP Partner specializing in premium hardware solutions and professional tech infrastructure for global enterprises.
+              Authorized HP Partner specializing in premium hardware solutions and professional operational systems for global enterprises.
             </p>
             <div className="flex gap-4">
                <div className="flex items-center gap-3 px-5 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm">
@@ -154,7 +154,8 @@ export default function Footer() {
                 { name: 'Privacy Policy', path: '/privacy-policy' },
                 { name: 'Terms & Conditions', path: '/terms-and-conditions' },
                 { name: 'Return Policy', path: '/return-policy' },
-                { name: 'Shipping Policy', path: '/shipping-policy' }
+                { name: 'Shipping Policy', path: '/shipping-policy' },
+                { name: 'Cookie Policy', path: '/cookie-policy' }
               ].map(item => (
                 <li key={item.name}>
                   <Link to={item.path} className="text-slate-500 hover:text-slate-900 transition-colors text-[13px] font-black uppercase tracking-tight flex items-center gap-3 group">
@@ -174,7 +175,7 @@ export default function Footer() {
                     <MapPin size={18} className="text-blue-600" />
                   </div>
                   <span className="text-[13px] font-black text-slate-500 leading-relaxed uppercase tracking-tight">
-                    4904 Alpinis Dr <br /> Raleigh, NC 27616, USA
+                    722 N West St <br /> Raleigh, NC 27603, USA
                   </span>
                </div>
                <div className="flex items-center gap-4">
@@ -190,7 +191,7 @@ export default function Footer() {
         {/* --- MAP INTEGRATION --- */}
         <div className="w-full h-[250px] mb-12 rounded-[2.5rem] overflow-hidden border border-slate-100 group shadow-inner grayscale hover:grayscale-0 transition-all duration-1000">
            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.87123456789!2d-78.5678901!3d35.8901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5f123456789%3A0x123456789abcdef!2s4904%20Alpinis%20Dr%2C%20Raleigh%2C%20NC%2027616%2C%20USA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.3456789!2d-78.6456789!3d35.7856789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5f6789abcdef%3A0x123456789abcdef!2zNzIyIE4gV2VzdCBTdCwgUmFsZWlnaCwgTkMgMjc2MDMsIFVTQQ!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
             />
@@ -199,8 +200,8 @@ export default function Footer() {
         {/* --- BOTTOM BAR --- */}
         <div className="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-8 text-[10px] font-black tracking-[0.2em] uppercase text-slate-400">
-            <span>© 2026 EASYMYPRINT | ALL RIGHTS RESERVED.</span>
-            <div className="hidden sm:flex items-center gap-3 border-l border-slate-100 pl-8">
+            <span>© 2026 EASYMYPRINT | ALL RIGHTS RESERVED. <span className="mx-2">|</span> A SUBSIDIARY OF PRIMEFIX SOLUTIONS LLC</span>
+            <div className="hidden sm:flex items-center gap-3 border-l border-slate-100 pl-8 text-[10px]">
               <Globe size={14} /> <span>USA | GLOBAL NETWORK</span>
             </div>
           </div>
@@ -208,7 +209,7 @@ export default function Footer() {
           <div className="flex items-center gap-8 grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-700">
              <div className="flex items-center gap-3">
                 <ShieldCheck size={16} className="text-blue-600" />
-                <span className="text-[9px] font-black uppercase tracking-widest text-slate-950">Verified Merchant</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-950">Verified Merchant</span>
              </div>
              <div className="text-blue-600 italic font-black text-xl">PayPal</div>
           </div>
@@ -225,4 +226,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 

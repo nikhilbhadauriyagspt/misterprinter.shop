@@ -51,16 +51,6 @@ export default function About() {
                   EXPLORE ARCHIVE <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                 </motion.button>
               </Link>
-              <div className="flex items-center gap-10">
-                 <div className="flex flex-col">
-                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">Authenticity</span>
-                    <span className="text-2xl font-black text-slate-900 tracking-tighter">100%</span>
-                 </div>
-                 <div className="flex flex-col">
-                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1">Global Reach</span>
-                    <span className="text-2xl font-black text-slate-900 tracking-tighter">24/7</span>
-                 </div>
-              </div>
             </div>
           </motion.div>
 

@@ -6,11 +6,12 @@ export default function CookiePolicy() {
   return (
     <PolicyLayout
       title="Cookie Policy"
-      subtitle="Learn about how we use cookies and similar technologies on our website."
+      subtitle="This Cookie Policy explains how we use cookies and similar technologies."
       lastUpdated="February 23, 2026"
     >
       <p className="lead">
-                 This Cookie Policy explains how EASYMYPRINT LLC ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="http://easymyprint.shop/">http://easymyprint.shop/</a>      </p>
+        This Cookie Policy explains how EASYMYPRINT LLC ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://easymyprint.shop/">https://easymyprint.shop/</a>
+      </p>
       <p>
         This Cookie Policy should be read together with our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-and-conditions">Terms and Conditions</Link>.
       </p>
@@ -39,10 +40,11 @@ export default function CookiePolicy() {
         <li>Prevent fraud and security threats</li>
         <li>Support marketing and advertising efforts</li>
       </ul>
-      <p>Cookies help us provide a smooth and secure shopping experience when purchasing printers, consumables, and accessories.</p>
+      <p>
+        Cookies help us provide a smooth and secure shopping experience when purchasing printers, consumables, and accessories.
+      </p>
 
       <h2>3. TYPES OF COOKIES WE USE</h2>
-
       <h3>A. Essential Cookies (Strictly Necessary)</h3>
       <p>These cookies are required for the website to function properly. Without them, certain services may not be available.</p>
       <p>They help with:</p>
@@ -71,7 +73,9 @@ export default function CookiePolicy() {
         <li>Enhance user experience</li>
         <li>Optimize product listings</li>
       </ul>
-      <p>You may opt out of Google Analytics tracking by visiting: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a></p>
+      <p>
+        You may opt out of Google Analytics tracking by visiting: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>
+      </p>
 
       <h3>C. Functional Cookies</h3>
       <p>These cookies remember:</p>
@@ -108,7 +112,9 @@ export default function CookiePolicy() {
       <p>These third parties have their own privacy policies governing their use of cookies.</p>
 
       <h2>5. HOW LONG DO COOKIES REMAIN?</h2>
-      <p>Session cookies expire when you close your browser. Persistent cookies remain until their expiration date, or you manually delete them. Retention depends on the specific cookie type.</p>
+      <p>
+        Session cookies expire when you close your browser. Persistent cookies remain until their expiration date, or you manually delete them. Retention depends on the specific cookie type.
+      </p>
 
       <h2>6. HOW TO CONTROL COOKIES</h2>
       <p>You can control cookies through your browser settings. Most browsers allow you to:</p>
@@ -118,36 +124,46 @@ export default function CookiePolicy() {
         <li>Disable third-party cookies</li>
         <li>Receive alerts when cookies are set</li>
       </ul>
-      <p>However, disabling cookies may prevent checkout functionality, affect account login, disable cart features, or limit personalization.</p>
+      <p>
+        However, disabling cookies may prevent checkout functionality, affect account login, disable cart features, or limit personalization.
+      </p>
 
       <h2>7. DO-NOT-TRACK (DNT)</h2>
-      <p>Some browsers include a "Do Not Track" feature. Currently, there is no universal standard for responding to DNT signals. Therefore, we do not respond to DNT browser signals at this time.</p>
+      <p>
+        Some browsers include a "Do Not Track" feature. Currently, there is no universal standard for responding to DNT signals. Therefore, we do not respond to DNT browser signals at this time.
+      </p>
 
       <h2>8. SALE OR SHARING OF PERSONAL INFORMATION</h2>
-      <p>We do not sell personal information. If cookies are considered “sharing” under certain US state privacy laws (such as targeted advertising), you may exercise your rights by:</p>
+      <p>
+        We do not sell personal information. If cookies are considered “sharing” under certain US state privacy laws (such as targeted advertising), you may exercise your rights by:
+      </p>
       <ul>
         <li>Emailing: <a href="mailto:info@easymyprint.shop">info@easymyprint.shop</a></li>
-                 <li>Visiting: <Link to="/contact">http://easymyprint.shop/contact</Link></li>      </ul>
+        <li>Visiting: <Link to="/contact">https://easymyprint.shop/contact</Link></li>
+      </ul>
 
       <h2>9. CHILDREN’S PRIVACY</h2>
       <p>Our website is not intended for individuals under the age of 18. We do not knowingly collect personal information from minors.</p>
 
       <h2>10. UPDATES TO THIS COOKIE POLICY</h2>
-      <p>We may update this Cookie Policy periodically to reflect changes in law, updates to tracking technologies, or business changes. The updated version will be indicated by a revised "Last Updated" date.</p>
+      <p>
+        We may update this Cookie Policy periodically to reflect changes in law, updates to tracking technologies, or business changes. The updated version will be indicated by a revised "Last Updated" date.
+      </p>
 
       <hr />
       <h2>11. CONTACT INFORMATION</h2>
       <p>If you have any questions regarding this Cookie Policy, please contact:</p>
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 my-8 not-prose">
-        <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2">
-                     <p>EASYMYPRINT LLC</p>          <p>Authorised HP Partner</p>
-                     <p>4904 Alpinis Dr</p>
-                     <p>Raleigh, NC 27616</p>          <p>United States</p>
-          <p className="pt-4 flex items-center gap-3 text-blue-600">info@easymyprint.shop</p>
+        <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2 uppercase tracking-tighter">
+          <p className="text-slate-900 font-black">EASYMYPRINT LLC</p>
+          <p>Authorised HP Partner</p>
+          <p>722 N West St</p>
+          <p>Raleigh, NC 27603</p>
+          <p>United States</p>
+          <p className="pt-4 text-blue-600 font-black lowercase">info@easymyprint.shop</p>
         </address>
       </div>
     </PolicyLayout>
   );
 }
-
 

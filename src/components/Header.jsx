@@ -199,7 +199,7 @@ export default function Header() {
                       key={link.name} 
                       to={link.path} 
                       className={cn(
-                        "px-5 py-2 h-full text-[10px] font-bold tracking-[0.15em] uppercase transition-all duration-300 rounded-full flex items-center gap-2 group relative",
+                        "px-5 py-2 h-full text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 rounded-full flex items-center gap-2 group relative",
                         isActive 
                           ? "bg-white text-blue-600 shadow-sm" 
                           : "text-slate-500 hover:text-slate-900 hover:bg-white/50"
@@ -221,7 +221,7 @@ export default function Header() {
                  </div>
                  <div className="flex flex-col leading-tight">
                     <span className="text-[7px] font-black text-blue-600 uppercase tracking-[0.2em] mb-0.5">Verified</span>
-                    <span className="text-[9px] font-black text-slate-900 uppercase tracking-tight">HP Partner</span>
+                    <span className="text-[11px] font-black text-slate-900 uppercase tracking-tight">HP Partner</span>
                  </div>
               </div>
             </div>
@@ -247,8 +247,8 @@ export default function Header() {
                 <div className="h-12 w-px bg-gradient-to-b from-transparent via-slate-200 to-transparent hidden sm:block" />
                 
                 <div className="hidden sm:flex flex-col justify-center leading-none">
-                  <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">A Subsidiary of</span>
-                  <span className="text-[12px] font-black text-slate-900 uppercase tracking-tight mt-1">PrimeFix Solutions</span>
+                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">A Subsidiary of</span>
+                  <span className="text-[11px] font-black text-slate-900 uppercase tracking-tight mt-1">PrimeFix Solutions</span>
                 </div>
               </Link>
             </div>
@@ -260,7 +260,7 @@ export default function Header() {
               <button 
                 onMouseEnter={() => setActiveDropdown('categories')}
                 className={cn(
-                  "hidden lg:flex items-center gap-2.5 px-6 h-12 rounded-full transition-all duration-500 text-[9px] font-black tracking-[0.15em] uppercase border-2 group/dept relative overflow-hidden mr-auto",
+                  "hidden lg:flex items-center gap-2.5 px-6 h-12 rounded-full transition-all duration-500 text-[11px] font-black tracking-[0.15em] uppercase border-2 group/dept relative overflow-hidden mr-auto",
                   activeDropdown === 'categories' 
                     ? "bg-slate-900 border-slate-900 text-white shadow-lg" 
                     : "bg-white border-slate-100 text-slate-900 hover:border-blue-600 hover:text-blue-600 shadow-sm"
@@ -281,7 +281,7 @@ export default function Header() {
                      value={searchQuery}
                      onChange={(e) => setSearchQuery(e.target.value)}
                      onKeyDown={(e) => e.key === 'Enter' && handleSearch(e)}
-                     className="w-full h-10 pl-10 pr-4 bg-white/50 border border-slate-200/50 rounded-full text-[10px] font-bold uppercase tracking-widest focus:outline-none focus:bg-white focus:border-blue-600 transition-all"
+                     className="w-full h-10 pl-10 pr-4 bg-white/50 border border-slate-200/50 rounded-full text-[11px] font-bold uppercase tracking-widest focus:outline-none focus:bg-white focus:border-blue-600 transition-all"
                    />
                 </div>
 

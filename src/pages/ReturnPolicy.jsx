@@ -21,8 +21,8 @@ export default function ReturnPolicy() {
         <address className="not-italic text-slate-900 font-black leading-relaxed uppercase tracking-tighter">
                      EASYMYPRINT LLC<br />          Attn: Returns<br />
           RMA #<br />
-                     4904 Alpinis Dr<br />
-                     Raleigh, NC 27616<br />          United States
+                     722 N West St<br />
+                     Raleigh, NC 27603<br />          United States
         </address>
         <p className="mt-6 text-blue-600 font-black uppercase text-xs tracking-widest">
           Return shipping charges will be paid or reimbursed by us.
@@ -50,4 +50,5 @@ export default function ReturnPolicy() {
     </PolicyLayout>
   );
 }
+
 

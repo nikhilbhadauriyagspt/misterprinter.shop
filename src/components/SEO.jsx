@@ -50,10 +50,10 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
       "description": finalDesc,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "4904 Alpinis Dr",
+        "streetAddress": "722 N West St",
         "addressLocality": "Raleigh",
         "addressRegion": "NC",
-        "postalCode": "27616",
+        "postalCode": "27603",
         "addressCountry": "US"
       },
       "contactPoint": {
@@ -68,4 +68,5 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
 
   return null;
 }
+
 
