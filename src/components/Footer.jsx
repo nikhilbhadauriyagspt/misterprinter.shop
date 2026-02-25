@@ -178,7 +178,7 @@ export default function Footer() {
         {/* --- BOTTOM BAR --- */}
         <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-[9px] font-black tracking-[0.2em] uppercase text-slate-400">
-            <span>© 2026 MISTERPRINTER | ALL RIGHTS RESERVED. <span className="mx-2 hidden md:inline">|</span> A SUBSIDIARY OF PRIMEFIX SOLUTIONS LLC</span>
+            <span>© 2026 MISTERPRINTER | ALL RIGHTS RESERVED. <span className="mx-2 hidden md:inline">|</span> A SUBSIDIARY OF PRIMEFIX SOLUTIONS </span>
           </div>
 
           <div className="flex items-center gap-10">

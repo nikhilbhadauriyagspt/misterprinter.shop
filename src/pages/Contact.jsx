@@ -95,10 +95,6 @@ export default function Contact() {
                 <div className="h-16 w-16 bg-white flex items-center justify-center mb-8">
                    <img src="/brands/hp.png" alt="HP" className="h-8 w-auto object-contain" />
                 </div>
-                <div className="flex items-center gap-3 mb-4">
-                   <div className="h-px w-6 bg-indigo-400" />
-                   <span className="text-[9px] font-black text-indigo-400 uppercase tracking-[0.4em]">Official Status</span>
-                </div>
                 <h4 className="text-xl font-black uppercase tracking-tighter mb-6 leading-none">
                   AUTHORIZED<br/>HP PARTNER.
                 </h4>

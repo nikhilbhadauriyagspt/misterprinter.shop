@@ -19,7 +19,7 @@ export default function ReturnPolicy() {
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 mt-6 not-prose">
         <p className="font-medium text-slate-700 mb-4 italic">After receiving an RMA number, place the item securely in its original packaging and include your proof of purchase, then mail your return to the following address:</p>
         <address className="not-italic text-slate-900 font-black leading-relaxed uppercase tracking-tighter">
-                     MISTERPRINTER LLC<br />          Attn: Returns<br />
+                     MISTERPRINTER <br />          Attn: Returns<br />
           RMA #<br />
                      10413 W Markham St<br />
                      Little Rock, AR 72205<br />          United States

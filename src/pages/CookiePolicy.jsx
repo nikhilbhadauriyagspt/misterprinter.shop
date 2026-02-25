@@ -10,7 +10,7 @@ export default function CookiePolicy() {
       lastUpdated="February 23, 2026"
     >
       <p className="lead">
-        This Cookie Policy explains how MISTERPRINTER LLC ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://misterprinter.shop/">https://misterprinter.shop/</a>
+        This Cookie Policy explains how MISTERPRINTER  ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://misterprinter.shop/">https://misterprinter.shop/</a>
       </p>
       <p>
         This Cookie Policy should be read together with our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-and-conditions">Terms and Conditions</Link>.
@@ -155,7 +155,7 @@ export default function CookiePolicy() {
       <p>If you have any questions regarding this Cookie Policy, please contact:</p>
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 my-8 not-prose">
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2 uppercase tracking-tighter">
-          <p className="text-slate-900 font-black">MISTERPRINTER LLC</p>
+          <p className="text-slate-900 font-black">MISTERPRINTER </p>
           <p>Authorized HP Partner</p>
           <p>10413 W Markham St</p>
           <p>Little Rock, AR 72205</p>

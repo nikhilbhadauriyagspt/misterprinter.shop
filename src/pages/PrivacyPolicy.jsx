@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
       lastUpdated="February 26, 2026"
     >
       <p className="lead">
-                 This Privacy Notice for MISTERPRINTER LLC ("we," "us," or "our"), describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:      </p>
+                 This Privacy Notice for MISTERPRINTER  ("we," "us," or "our"), describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:      </p>
       <ul>
         <li>Visit our website at <a href="http://misterprinter.shop/">http://misterprinter.shop/</a> or any website of ours that links to this Privacy Notice</li>
                  <li>Use Printers, Consumables & Accessories. MISTERPRINTER is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.</li>        <li>Engage with us in other related ways, including any marketing or events</li>
@@ -283,7 +283,7 @@ export default function PrivacyPolicy() {
       <p>If you have questions or comments about this notice, you may email us at <a href="mailto:info@misterprinter.shop">info@misterprinter.shop</a> or contact us by post at:</p>
       <div className="bg-slate-50 p-8 border-2 border-slate-900 my-8 not-prose shadow-sm">
         <address className="not-italic text-slate-700 font-bold leading-relaxed">
-                     MISTERPRINTER LLC<br />          Authorized HP Partner<br />
+                     MISTERPRINTER <br />          Authorized HP Partner<br />
                      10413 W Markham St<br />
                      Little Rock, AR 72205<br />          United States
         </address>

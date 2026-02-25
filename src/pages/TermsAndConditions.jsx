@@ -9,12 +9,12 @@ export default function TermsAndConditions() {
       lastUpdated="February 26, 2026"
     >
       <p className="lead">
-        Welcome to MISTERPRINTER. These terms and conditions outline the rules and regulations for the use of MISTERPRINTER LLC's Website.
+        Welcome to MISTERPRINTER. These terms and conditions outline the rules and regulations for the use of MISTERPRINTER 's Website.
       </p>
 
       <h2>1. AGREEMENT TO TERMS</h2>
       <p>
-        We are MISTERPRINTER LLC ("Company," "we," "us," or "our"), a company registered in Arkansas, United States at 10413 W Markham St, Little Rock, AR 72205, USA.
+        We are MISTERPRINTER  ("Company," "we," "us," or "our"), a company registered in Arkansas, United States at 10413 W Markham St, Little Rock, AR 72205, USA.
       </p>
       <p>
         We operate the website <a href="http://misterprinter.shop/">http://misterprinter.shop/</a> (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
@@ -26,7 +26,7 @@ export default function TermsAndConditions() {
         You can contact us by email at <a href="mailto:info@misterprinter.shop">info@misterprinter.shop</a>, or by mail to 10413 W Markham St, Little Rock, AR 72205, USA, United States.
       </p>
       <p>
-        These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and MISTERPRINTER LLC, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
+        These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and MISTERPRINTER , concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
       </p>
 
       <h2>2. INTELLECTUAL PROPERTY RIGHTS</h2>
@@ -115,7 +115,7 @@ export default function TermsAndConditions() {
       <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
       <div className="bg-slate-50 p-8 border-2 border-slate-900 shadow-sm not-prose">
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-1">
-          <p className="text-slate-900 font-black">MISTERPRINTER LLC</p>
+          <p className="text-slate-900 font-black">MISTERPRINTER </p>
           <p>10413 W Markham St</p>
           <p>Little Rock, AR 72205</p>
           <p>United States</p>
