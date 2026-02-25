@@ -5,18 +5,15 @@ import { useCart } from '../context/CartContext';
 import { 
   Search, 
   ChevronDown, 
-  Filter, 
-  LayoutGrid, 
-  List, 
-  ShoppingBag, 
-  Heart,
   X,
   Loader2,
   Check,
-  ArrowUpDown,
   SlidersHorizontal,
   ArrowRight,
-  Plus
+  Plus,
+  ShoppingBag,
+  Heart,
+  LayoutGrid
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import API_BASE_URL from '../config';
@@ -119,116 +116,114 @@ export default function Shop() {
   };
 
   return (
-    <div className="bg-white min-h-screen font-urbanist">
+    <div className="bg-white min-h-screen font-urbanist pt-20 lg:pt-24">
       <SEO 
-        title="Premium Catalog | EASYMYPRINT" 
-        description="Browse our authorized catalog of high-performance tech solutions."
+        title="Industrial Catalog | MISTERPRINTER" 
+        description="Premium industrial hardware and operational systems."
       />
       
-      {/* --- HERO MATCHED PAGE HEADER --- */}
-      <div className="pt-32 pb-16 px-6 md:px-10 lg:px-16 bg-white relative overflow-hidden">
-        {/* Background Decor */}
-        <div className="absolute top-0 right-0 w-[40%] h-full bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />
-        
-        <div className="max-w-[1920px] mx-auto relative z-10">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <span className="h-[1px] w-6 bg-blue-600 animate-pulse" />
-              <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em]">Authorized Catalog</span>
+      {/* --- PAGE HEADER --- */}
+      <div className="py-12 lg:py-20 px-4 md:px-10 lg:px-16 border-b-2 border-slate-900 bg-slate-50">
+        <div className="max-w-[1920px] mx-auto">
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-3">
+              <div className="h-1 w-8 bg-indigo-600" />
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">Inventory Hub</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85] mb-12">
-              <span className="block mb-2">EXPLORE OUR</span>
-              <span className="text-transparent stroke-text-light">INVENTORY.</span>
-            </h1>
-            
-            {/* Search Bar Refinement */}
-            <div className="w-full max-w-2xl relative group">
-               <div className="absolute -inset-4 bg-blue-600/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-               <input 
-                 type="text" 
-                 placeholder="Search products, brands or collections..."
-                 value={search}
-                 onChange={(e) => updateFilter('search', e.target.value)}
-                 className="w-full h-20 pl-14 pr-20 bg-slate-50 border border-slate-200 rounded-[2rem] text-xs font-black uppercase tracking-widest focus:outline-none focus:bg-white focus:border-blue-600 transition-all duration-500 shadow-inner relative z-10"
-               />
-               <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 z-20" size={20} />
-               <div className="absolute right-3 top-3 bottom-3 px-8 bg-slate-900 text-white rounded-[1.5rem] flex items-center justify-center text-[10px] font-black uppercase tracking-widest shadow-lg z-20 hover:bg-blue-600 transition-colors cursor-pointer">
-                  Search
-               </div>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+              <h1 className="text-4xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85]">
+                Authorized<br/>
+                <span className="text-indigo-600">Product Gallery.</span>
+              </h1>
+
+              <div className="w-full max-w-xl relative group">
+                <form onSubmit={(e) => { e.preventDefault(); updateFilter('search', search); }} className="flex border-2 border-slate-900 shadow-[6px_6px_0px_rgba(0,0,0,0.1)]">
+                  <input 
+                    type="text" 
+                    placeholder="Search specifications..."
+                    value={search}
+                    onChange={(e) => updateFilter('search', e.target.value)}
+                    className="flex-1 h-14 px-6 text-sm bg-white focus:outline-none font-bold uppercase tracking-widest placeholder:text-slate-300"
+                  />
+                  <button type="submit" className="h-14 px-8 bg-slate-900 text-white hover:bg-indigo-600 transition-colors flex items-center justify-center">
+                    <Search size={20} strokeWidth={3} />
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* --- STICKY FILTER CONTROL HUB --- */}
-      <div className="sticky top-[80px] lg:top-[96px] z-[45] bg-white/80 backdrop-blur-3xl border-y border-slate-100 py-5 px-6 md:px-10 lg:px-16">
-        <div className="max-w-[1920px] mx-auto flex items-center justify-between">
+      {/* --- FILTER CONTROL BAR --- */}
+      <div className="sticky top-[80px] lg:top-[96px] z-[45] bg-white border-b-2 border-slate-900 py-4 px-4 md:px-10 lg:px-16">
+        <div className="max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-6">
+          
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsFilterOpen(!isFilterOpen)}
               className={cn(
-                "h-12 px-8 rounded-2xl flex items-center gap-3 text-[10px] font-black uppercase tracking-widest transition-all shadow-sm",
-                isFilterOpen ? "bg-slate-900 text-white shadow-xl" : "bg-white border border-slate-200 text-slate-900 hover:border-blue-600 hover:text-blue-600"
+                "h-12 px-8 flex items-center gap-3 text-[11px] font-black uppercase tracking-widest transition-all border-2",
+                isFilterOpen 
+                  ? "bg-slate-900 text-white border-slate-900 shadow-[4px_4px_0px_rgba(0,0,0,0.1)]" 
+                  : "bg-white border-slate-200 text-slate-900 hover:border-slate-900"
               )}
             >
-              <SlidersHorizontal size={16} />
-              {isFilterOpen ? "Hide Filters" : "Filter Gallery"}
+              <SlidersHorizontal size={16} strokeWidth={3} />
+              {isFilterOpen ? "Close Config" : "System Filters"}
             </button>
 
-            {/* Quick Filter Chips */}
-            <AnimatePresence>
-              {(category || brand || search) && (
-                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="hidden sm:flex items-center gap-2 border-l border-slate-100 pl-4">
-                  {category && (
-                    <button onClick={() => updateFilter('category', '')} className="h-9 px-4 bg-blue-50 border border-blue-100 text-blue-600 rounded-xl text-[9px] font-black uppercase flex items-center gap-2 hover:bg-blue-100 transition-colors">
-                      {category} <X size={10} />
-                    </button>
-                  )}
-                  {brand && (
-                    <button onClick={() => updateFilter('brand', '')} className="h-9 px-4 bg-slate-100 border border-slate-200 text-slate-900 rounded-xl text-[9px] font-black uppercase flex items-center gap-2 hover:bg-slate-200 transition-colors">
-                      {brand} <X size={10} />
-                    </button>
-                  )}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <div className="hidden lg:flex items-center gap-2">
+              <AnimatePresence>
+                {category && (
+                  <button onClick={() => updateFilter('category', '')} className="h-9 px-4 bg-indigo-50 border-2 border-indigo-100 text-indigo-600 text-[9px] font-black uppercase flex items-center gap-2 hover:bg-indigo-100">
+                    {category} <X size={10} strokeWidth={3} />
+                  </button>
+                )}
+                {brand && (
+                  <button onClick={() => updateFilter('brand', '')} className="h-9 px-4 bg-slate-100 border-2 border-slate-200 text-slate-900 text-[9px] font-black uppercase flex items-center gap-2 hover:bg-slate-200">
+                    {brand} <X size={10} strokeWidth={3} />
+                  </button>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
-          <div className="flex items-center gap-8">
-             <div className="hidden md:flex items-center gap-4 bg-slate-50 px-5 py-2.5 rounded-xl border border-slate-100">
-                <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Sort By</span>
+          <div className="flex items-center gap-6">
+             <div className="flex items-center gap-4 bg-slate-50 px-5 py-2 border-2 border-slate-200">
+                <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Sorting</span>
                 <select 
                   value={sort} onChange={(e) => updateFilter('sort', e.target.value)}
                   className="bg-transparent text-[11px] font-black uppercase focus:outline-none cursor-pointer text-slate-900"
                 >
-                  <option value="newest">Recent Arrivals</option>
-                  <option value="price_low">Price: Low to High</option>
-                  <option value="price_high">Price: High to Low</option>
-                  <option value="name_asc">Alphabetical</option>
+                  <option value="newest">Latest First</option>
+                  <option value="price_low">Price +</option>
+                  <option value="price_high">Price -</option>
+                  <option value="name_asc">A-Z</option>
                 </select>
              </div>
-             <p className="text-[10px] font-black text-slate-900 uppercase tracking-widest border-l border-slate-100 pl-8">{total} Units</p>
+             <div className="h-10 w-px bg-slate-200 hidden sm:block" />
+             <p className="text-[11px] font-black text-slate-900 uppercase tracking-[0.2em]">{total} Active Units</p>
           </div>
         </div>
 
-        {/* --- EXPANDABLE FILTER DRAWER --- */}
+        {/* --- FILTER DRAWER --- */}
         <AnimatePresence>
           {isFilterOpen && (
             <motion.div 
               initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}
-              className="bg-white border-t border-slate-100 overflow-hidden"
+              className="bg-white overflow-hidden"
             >
-              <div className="max-w-[1920px] mx-auto py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20">
-                <div className="space-y-8">
-                  <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-[0.4em] flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 bg-blue-600 rounded-full" /> Collections
-                  </h4>
-                  <div className="space-y-1.5 max-h-72 overflow-y-auto custom-scrollbar pr-4">
+              <div className="max-w-[1920px] mx-auto py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 border-2 border-slate-900 mt-6">
+                
+                <div className="bg-white p-8">
+                  <h4 className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.4em] mb-8 border-b-2 border-slate-100 pb-2">Collections</h4>
+                  <div className="space-y-1 max-h-64 overflow-y-auto pr-4 custom-scrollbar">
                     {categories.map(cat => (
                       <button 
                         key={cat.id} onClick={() => updateFilter('category', cat.slug)}
-                        className={cn("w-full text-left px-5 py-3 text-[11px] font-black uppercase transition-all rounded-xl", category === cat.slug ? "bg-slate-900 text-white shadow-xl" : "text-slate-400 hover:text-blue-600 hover:bg-blue-50/50")}
+                        className={cn("w-full text-left px-4 py-3 text-[11px] font-black uppercase transition-all", category === cat.slug ? "bg-slate-900 text-white" : "text-slate-400 hover:text-slate-900 hover:bg-slate-50")}
                       >
                         {cat.name}
                       </button>
@@ -236,15 +231,13 @@ export default function Shop() {
                   </div>
                 </div>
 
-                <div className="space-y-8">
-                  <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-[0.4em] flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 bg-blue-600 rounded-full" /> Partner Brands
-                  </h4>
+                <div className="bg-white p-8">
+                  <h4 className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.4em] mb-8 border-b-2 border-slate-100 pb-2">Partner Brands</h4>
                   <div className="grid grid-cols-2 gap-2">
                     {brands.map(b => (
                       <button 
                         key={b.id} onClick={() => updateFilter('brand', brand === b.name ? '' : b.name)}
-                        className={cn("px-4 py-3 text-[10px] font-black uppercase border transition-all rounded-xl", brand === b.name ? "bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-600/20" : "bg-white border-slate-100 text-slate-400 hover:border-slate-900 hover:text-slate-900")}
+                        className={cn("px-3 py-3 text-[10px] font-black uppercase border-2 transition-all", brand === b.name ? "bg-indigo-600 text-white border-indigo-600 shadow-[4px_4px_0px_rgba(0,0,0,0.1)]" : "bg-white border-slate-100 text-slate-400 hover:border-slate-900 hover:text-slate-900")}
                       >
                         {b.name}
                       </button>
@@ -252,16 +245,17 @@ export default function Shop() {
                   </div>
                 </div>
 
-                <div className="bg-slate-900 text-white p-10 rounded-[2.5rem] flex flex-col justify-between shadow-2xl shadow-black/20 lg:col-span-2">
-                   <div>
-                      <p className="text-[9px] font-black text-blue-400 uppercase tracking-[0.4em] mb-4">Filtering Logic</p>
-                      <h5 className="text-2xl font-black text-white uppercase tracking-tighter leading-tight mb-6">Refine Your <br />Search.</h5>
+                <div className="bg-slate-900 text-white p-10 lg:col-span-2 flex flex-col justify-between group">
+                   <div className="relative">
+                      <LayoutGrid size={40} className="text-indigo-500 mb-8 opacity-20 group-hover:rotate-90 transition-transform duration-700" />
+                      <h5 className="text-3xl font-black text-white uppercase tracking-tighter leading-tight mb-4">System Refinement<br/>Interface.</h5>
+                      <p className="text-slate-400 text-sm font-bold uppercase tracking-widest max-w-sm">Adjust parameters to narrow down precise hardware specifications from our authorized inventory.</p>
                    </div>
                    <button 
                      onClick={() => navigate('/shop')}
-                     className="w-full py-5 bg-blue-600 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-lg"
+                     className="mt-10 w-full py-5 bg-white text-slate-900 font-black text-[11px] uppercase tracking-[0.3em] hover:bg-indigo-600 hover:text-white transition-all border-2 border-white shadow-[8px_8px_0px_rgba(79,70,229,0.3)]"
                    >
-                     Reset All
+                     Reset All Parameters
                    </button>
                 </div>
               </div>
@@ -271,89 +265,81 @@ export default function Shop() {
       </div>
 
       {/* --- RESULTS GRID --- */}
-      <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-16 py-16 lg:py-24">
+      <div className="max-w-[1920px] mx-auto px-4 md:px-10 lg:px-16 py-16 lg:py-24">
         {loading ? (
           <div className="flex flex-col items-center justify-center py-48">
-            <Loader2 className="animate-spin h-12 w-12 text-blue-600 mb-6" />
+            <Loader2 className="animate-spin h-12 w-12 text-indigo-600 mb-6" />
             <p className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300">Accessing Database...</p>
           </div>
         ) : products.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-48 text-center bg-slate-50 rounded-[4rem] border border-slate-100">
-            <div className="h-24 w-24 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-8 shadow-sm">
-               <X size={40} className="text-slate-200" />
+          <div className="flex flex-col items-center justify-center py-48 text-center border-2 border-slate-900 bg-slate-50">
+            <div className="h-20 w-20 bg-white border-2 border-slate-900 flex items-center justify-center mb-8 shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
+               <X size={32} strokeWidth={3} className="text-slate-900" />
             </div>
-            <h2 className="text-4xl font-black text-slate-900 tracking-tighter uppercase mb-4">No Units Found</h2>
-            <p className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-12">Try adjusting your search or filters</p>
-            <button onClick={() => navigate('/shop')} className="px-12 py-5 bg-slate-900 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all">Clear Refinement</button>
+            <h2 className="text-4xl font-black text-slate-900 tracking-tighter uppercase mb-4">Zero Matches Found</h2>
+            <p className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-12">System parameters returned no authorized matches.</p>
+            <button onClick={() => navigate('/shop')} className="px-12 py-5 bg-slate-900 text-white font-black text-[11px] uppercase tracking-widest border-2 border-slate-900 shadow-[8px_8px_0px_rgba(0,0,0,0.1)] hover:bg-indigo-600 hover:border-indigo-600 transition-all active:shadow-none">Clear All Refinements</button>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px border border-slate-900 bg-slate-900">
             {products.map((p, i) => (
               <motion.div 
-                key={p.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i % 5) * 0.05 }}
-                className="group relative bg-slate-50/50 rounded-[2.5rem] border border-slate-100 p-6 flex flex-col transition-all duration-700 hover:bg-white hover:border-blue-100 hover:shadow-[0_40px_80px_rgba(0,0,0,0.04)] h-full overflow-hidden"
+                key={p.id} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+                className="group relative bg-white p-6 flex flex-col h-[520px] border border-transparent hover:border-slate-200 transition-all"
               >
-                {/* Wishlist Button */}
+                {/* Wishlist */}
                 <button 
                   onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleWishlist(p); }}
                   className={cn(
-                    "absolute top-5 right-5 z-20 h-9 w-9 rounded-full bg-white border border-slate-100 flex items-center justify-center transition-all duration-500 shadow-sm",
-                    isInWishlist(p.id) ? "text-red-500 shadow-md" : "text-slate-200 hover:text-red-500 hover:scale-110"
+                    "absolute top-4 right-4 z-20 h-10 w-10 border-2 transition-all duration-300 flex items-center justify-center",
+                    isInWishlist(p.id) 
+                      ? "bg-slate-900 text-white border-slate-900 shadow-[4px_4px_0px_rgba(0,0,0,0.1)]" 
+                      : "bg-white text-slate-200 border-slate-100 hover:border-slate-900 hover:text-red-500"
                   )}
                 >
-                  <Heart size={15} fill={isInWishlist(p.id) ? "currentColor" : "none"} />
+                  <Heart size={18} fill={isInWishlist(p.id) ? "currentColor" : "none"} strokeWidth={2.5} />
                 </button>
 
-                <Link to={`/product/${p.slug}`} className="flex-1 flex flex-col pt-4">
-                  <div className="relative aspect-square mb-8 flex items-center justify-center p-4">
-                    <div className="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-90 transition-transform duration-700 opacity-50 shadow-inner" />
-                    <motion.img 
-                      whileHover={{ scale: 1.1, rotate: 2 }}
+                <Link to={`/product/${p.slug}`} className="flex-1 flex flex-col">
+                  <div className="relative h-[220px] mb-8 flex items-center justify-center p-4">
+                    <img 
                       src={getImagePath(p.images)} alt={p.name}
-                      className="max-w-full max-h-full object-contain mix-blend-multiply relative z-10 transition-transform duration-700"
+                      className="max-w-full max-h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                       onError={(e) => { e.target.src = "https://via.placeholder.com/400x400?text=Not+Found"; }}
                     />
                   </div>
 
-                  <div className="space-y-3 px-2">
-                    <span className="text-[8px] font-black text-blue-600 uppercase tracking-[0.3em] bg-blue-50/50 px-2 py-1 rounded-md">{p.brand_name || 'AUTHENTIC'}</span>
-                    <h3 className="text-[14px] font-black text-slate-900 uppercase tracking-tighter line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                  <div className="space-y-3">
+                    <span className="text-[10px] font-black text-indigo-600 uppercase tracking-widest">{p.brand_name || 'AUTHENTIC'}</span>
+                    <h3 className="text-[16px] font-black text-slate-900 uppercase tracking-tight line-clamp-2 leading-tight group-hover:text-indigo-600 transition-colors">
                       {p.name}
                     </h3>
-                    <div className="flex items-center justify-between pt-2">
-                      <span className="text-xl font-black text-slate-950 tracking-tighter">${p.price}</span>
+                    <div className="pt-4">
+                      <span className="text-2xl font-black text-slate-950 tracking-tighter">${p.price}</span>
                     </div>
                   </div>
                 </Link>
 
-                <div className="mt-8 pt-6 border-t border-slate-100/50">
-                  <motion.button 
-                    whileTap={{ scale: 0.95 }}
+                <div className="mt-8 border-t-2 border-slate-900 pt-6">
+                  <button 
                     onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleAddToCart(p); }}
                     disabled={addedItems[p.id]}
                     className={cn(
-                      "w-full h-12 rounded-xl flex items-center justify-center gap-3 font-black text-[10px] uppercase tracking-widest transition-all duration-500 shadow-md",
+                      "w-full h-12 border-2 flex items-center justify-center gap-3 font-black text-[10px] uppercase tracking-widest transition-all",
                       addedItems[p.id] 
-                        ? "bg-emerald-500 text-white shadow-emerald-500/20" 
-                        : "bg-slate-950 text-white hover:bg-blue-600 shadow-black/10 hover:shadow-blue-600/20"
+                        ? "bg-emerald-500 text-white border-emerald-500 shadow-[4px_4px_0px_rgba(16,185,129,0.2)]" 
+                        : "bg-slate-900 text-white border-slate-900 hover:bg-indigo-600 hover:border-indigo-600 shadow-[4px_4px_0px_rgba(0,0,0,0.1)] active:shadow-none active:translate-x-1 active:translate-y-1"
                     )}
                   >
-                    {addedItems[p.id] ? <Check size={14} /> : <Plus size={14} />}
-                    {addedItems[p.id] ? "SUCCESS" : "ADD TO CART"}
-                  </motion.button>
+                    {addedItems[p.id] ? <Check size={16} strokeWidth={3} /> : <ShoppingBag size={16} />}
+                    {addedItems[p.id] ? "ADDED" : "BUY NOW"}
+                  </button>
                 </div>
               </motion.div>
             ))}
           </div>
         )}
       </div>
-
-      <style>{`
-        .stroke-text-light {
-          -webkit-text-stroke: 2px #0f172a;
-          color: transparent;
-        }
-      `}</style>
     </div>
   );
 }

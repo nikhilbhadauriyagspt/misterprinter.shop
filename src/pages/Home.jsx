@@ -96,139 +96,123 @@ export default function Home() {
       <BrandShowcase brands={data.brands} />
       <ProductGrid products={data.mixedArrivals.slice(0, 30)} />
 
-      <CategorySlider 
-        title="Office Printers" 
-        subtitle="Laser & Inkjet" 
-        products={data.printers} 
-      />
-
       <QuickPicks products={data.all} />
 
-      {/* 13. EXPERT CONSULTING - MODERN PREMIUM REDESIGN */}
-      <section className="py-24 lg:py-32 bg-slate-50 font-urbanist relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[40%] h-full bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />
-        
-        <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+      {/* 13. EXPERT CONSULTING - INDUSTRIAL REDESIGN */}
+      <section className="py-20 lg:py-32 bg-white font-urbanist border-b border-slate-200">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             
             {/* Left Content */}
             <div className="lg:col-span-5">
-              <div className="flex items-center gap-2 mb-6">
-                <span className="h-[1px] w-6 bg-blue-600 animate-pulse" />
-                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em]">Elite Advisory</span>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-px w-8 bg-indigo-600" />
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">Strategic Consultation</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85] mb-10">
-                <span className="block mb-2">MASTERFUL STRATEGIC</span>
-                <span className="text-transparent stroke-text-light">GUIDANCE.</span>
+                Professional<br/>
+                <span className="text-indigo-600 font-black">Workflow Solutions.</span>
               </h2>
               
-              <p className="text-slate-500 text-lg md:text-xl font-bold leading-relaxed mb-12 max-w-md border-l-4 border-slate-200 pl-8">
-                Enhance your professional environment with our bespoke guidance. Our dedicated specialists deliver refined excellence for superior workspace productivity.
+              <p className="text-slate-500 text-base md:text-lg font-bold leading-relaxed mb-12 max-w-lg border-l-4 border-slate-900 pl-8">
+                Optimise your operational infrastructure with expert-led strategic planning. Our technicians provide tailored solutions to ensure peak efficiency across your entire enterprise.
               </p>
               
               <Link to="/contact">
-                <motion.button 
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="h-16 px-12 bg-slate-900 text-white font-black text-xs uppercase tracking-[0.3em] rounded-[1.5rem] shadow-2xl shadow-black/10 hover:bg-blue-600 transition-all duration-500 flex items-center gap-4 group"
-                >
-                  REQUEST ADVISORY
+                <button className="h-16 px-12 bg-slate-900 text-white font-black text-[11px] uppercase tracking-[0.3em] transition-all hover:bg-indigo-600 flex items-center gap-6 shadow-[6px_6px_0px_rgba(0,0,0,0.1)] active:shadow-none active:translate-x-1 active:translate-y-1 border-2 border-slate-900 group">
+                  GET EXPERT ADVICE
                   <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-                </motion.button>
+                </button>
               </Link>
             </div>
 
-            {/* Right Grid */}
-            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Right Grid - Square Industrial Cards */}
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-200 border-2 border-slate-900">
               {[
-                { icon: <Shield size={28} />, title: "Premium Warranty", desc: "Official protection protocols for your hardware." },
-                { icon: <Wrench size={28} />, title: "Precision Setup", desc: "Optimized configuration for peak performance." },
-                { icon: <Zap size={28} />, title: "Priority Response", desc: "Dedicated assistance for your critical needs." },
-                { icon: <Layers size={28} />, title: "Seamless Scaling", desc: "Future-ready deployment for growing teams." }
+                { icon: <Shield size={24} />, title: "Full Protection", desc: "Enterprise-grade warranty protocols for all hardware units." },
+                { icon: <Wrench size={24} />, title: "Rapid Deployment", desc: "Precision configuration and hardware setup by certified technicians." },
+                { icon: <Zap size={24} />, title: "Priority Support", desc: "Instant response channels for critical operational requirements." },
+                { icon: <Layers size={24} />, title: "System Scaling", desc: "Future-ready infrastructure design for growing organizations." }
               ].map((item, i) => (
-                <motion.div 
+                <div 
                   key={i}
-                  whileHover={{ y: -10 }}
-                  className="p-10 bg-white/60 backdrop-blur-xl border border-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.08)] transition-all duration-700 group hover:border-blue-100"
+                  className="p-10 bg-white group hover:bg-slate-50 transition-all duration-500"
                 >
-                   <div className="h-14 w-14 rounded-2xl bg-slate-50 text-slate-900 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                   <div className="h-14 w-14 border-2 border-slate-900 text-slate-900 flex items-center justify-center mb-8 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all duration-500">
                       {item.icon}
                    </div>
                    <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-3">{item.title}</h4>
-                   <p className="text-sm font-bold text-slate-400 uppercase tracking-widest leading-relaxed group-hover:text-slate-500">{item.desc}</p>
-                </motion.div>
+                   <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed group-hover:text-slate-600">{item.desc}</p>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 14. SCALABLE INFRASTRUCTURE - MODERN PREMIUM REDESIGN */}
-      <section className="py-24 lg:py-32 bg-white font-urbanist relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-600/10 to-transparent" />
-        
-        <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-24">
+      {/* 14. GLOBAL EXCELLENCE - INDUSTRIAL REDESIGN */}
+      <section className="py-20 lg:py-32 bg-white font-urbanist border-b border-slate-200">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-10 lg:px-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
             
             {/* Left Column */}
             <div className="lg:w-1/2">
-              <div className="flex items-center gap-2 mb-6">
-                <span className="h-[1px] w-6 bg-blue-600 animate-pulse" />
-                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em]">Global Excellence</span>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-px w-8 bg-indigo-600" />
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">Enterprise Network</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85] mb-10">
-                <span className="block mb-2">SEAMLESS</span>
-                <span className="text-transparent stroke-text-light">EXPERIENCES.</span>
+                Global<br/>
+                <span className="text-indigo-600">Scale.</span>
               </h2>
               
-              <p className="text-slate-500 text-lg md:text-xl font-bold leading-relaxed mb-12 max-w-lg border-l-4 border-blue-50 pl-8">
-                Offering refined acquisition channels and comprehensive stewardship for premier organizations across the globe.
+              <p className="text-slate-500 text-base md:text-lg font-bold leading-relaxed mb-12 max-w-lg border-l-4 border-slate-900 pl-8">
+                Providing specialized procurement channels and strategic logistical support for premier organizations across the international landscape.
               </p>
               
-              <div className="flex gap-12 lg:gap-20">
+              <div className="flex gap-12 lg:gap-16">
                  <div className="flex flex-col group cursor-default">
-                    <span className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-blue-600 transition-colors duration-500">500+</span>
+                    <span className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-indigo-600 transition-colors duration-500">500+</span>
                     <div className="flex items-center gap-2 mt-3">
-                       <div className="h-1 w-1 rounded-full bg-blue-600" />
-                       <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Strategic Allies</span>
+                       <div className="h-1.5 w-1.5 bg-indigo-600" />
+                       <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Global Allies</span>
                     </div>
                  </div>
-                 <div className="w-px h-16 bg-slate-100" />
+                 <div className="w-[2px] h-16 bg-slate-900" />
                  <div className="flex flex-col group cursor-default">
-                    <span className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-blue-600 transition-colors duration-500">24H</span>
+                    <span className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-indigo-600 transition-colors duration-500">24H</span>
                     <div className="flex items-center gap-2 mt-3">
-                       <div className="h-1 w-1 rounded-full bg-blue-600" />
-                       <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Swift Support</span>
+                       <div className="h-1.5 w-1.5 bg-indigo-600" />
+                       <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Swift Delivery</span>
                     </div>
                  </div>
               </div>
             </div>
 
-            {/* Right Column (Bento Cards) */}
-            <div className="lg:w-1/2 flex flex-col gap-4">
+            {/* Right Column - Square Bento Cards */}
+            <div className="lg:w-1/2 flex flex-col gap-px bg-slate-200 border-2 border-slate-900">
               {[
-                { id: "01", title: "Enterprise Pricing", desc: "Optimized procurement for high-volume units." },
-                { id: "02", title: "Asset Management", desc: "Comprehensive device tracking & lifecycle support." },
-                { id: "03", title: "Priority Logistics", desc: "Tracked international fulfillment networks." }
+                { id: "01", title: "Enterprise Pricing", desc: "Volume-optimized procurement models for large-scale operations." },
+                { id: "02", title: "Asset Management", desc: "End-to-end device tracking and infrastructure lifecycle stewardship." },
+                { id: "03", title: "Global Logistics", desc: "Rapid fulfillment protocols through our international supply network." }
               ].map((item, i) => (
-                <motion.div 
+                <div 
                   key={i}
-                  whileHover={{ x: 15 }}
-                  className="bg-slate-50/50 hover:bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-100 transition-all duration-500 group flex items-center justify-between hover:shadow-[0_30px_60px_rgba(0,0,0,0.03)]"
+                  className="bg-white p-8 flex items-center justify-between group hover:bg-slate-50 transition-all duration-500"
                 >
-                  <div className="flex items-center gap-10">
-                     <span className="text-sm font-black text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 italic">[{item.id}]</span>
+                  <div className="flex items-center gap-8">
+                     <span className="text-xs font-black text-indigo-600 italic">[{item.id}]</span>
                      <div>
                         <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-1">{item.title}</h4>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest max-w-[280px] leading-relaxed group-hover:text-slate-500">{item.desc}</p>
+                        <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest max-w-[300px] leading-relaxed group-hover:text-slate-600">{item.desc}</p>
                      </div>
                   </div>
-                  <Link to="/contact" className="h-12 w-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-slate-900 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-500 shadow-sm">
+                  <Link to="/contact" className="h-12 w-12 border-2 border-slate-900 flex items-center justify-center text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-all duration-500 shadow-[4px_4px_0px_rgba(0,0,0,0.1)] active:shadow-none">
                      <ArrowUpRight size={20} />
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
