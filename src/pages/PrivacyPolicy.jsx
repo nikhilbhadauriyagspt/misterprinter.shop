@@ -284,8 +284,8 @@ export default function PrivacyPolicy() {
       <div className="bg-slate-50 p-8 border-2 border-slate-900 my-8 not-prose shadow-sm">
         <address className="not-italic text-slate-700 font-bold leading-relaxed">
                      MISTERPRINTER LLC<br />          Authorized HP Partner<br />
-                     722 N West St<br />
-                     Raleigh, NC 27603<br />          United States
+                     10413 W Markham St<br />
+                     Little Rock, AR 72205<br />          United States
         </address>
       </div>
 

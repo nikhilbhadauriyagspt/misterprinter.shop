@@ -156,7 +156,7 @@ export default function Footer() {
             <div className="flex items-start gap-4">
                <MapPin size={16} className="text-slate-900 shrink-0" />
                <span className="text-[11px] font-black text-slate-500 leading-relaxed uppercase tracking-widest">
-                 722 N West St <br /> Raleigh, NC 27603, USA
+                 10413 W Markham St, Little Rock, AR 72205, USA, USA
                </span>
             </div>
             <div className="flex items-center gap-4">

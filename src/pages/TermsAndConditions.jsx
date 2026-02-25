@@ -14,7 +14,7 @@ export default function TermsAndConditions() {
 
       <h2>1. AGREEMENT TO TERMS</h2>
       <p>
-        We are MISTERPRINTER LLC ("Company," "we," "us," or "our"), a company registered in North Carolina, United States at 722 N West St, Raleigh, NC 27603.
+        We are MISTERPRINTER LLC ("Company," "we," "us," or "our"), a company registered in Arkansas, United States at 10413 W Markham St, Little Rock, AR 72205, USA.
       </p>
       <p>
         We operate the website <a href="http://misterprinter.shop/">http://misterprinter.shop/</a> (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
@@ -23,7 +23,7 @@ export default function TermsAndConditions() {
         MISTERPRINTER is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.
       </p>
       <p>
-        You can contact us by email at <a href="mailto:info@misterprinter.shop">info@misterprinter.shop</a>, or by mail to 722 N West St, Raleigh, NC 27603, United States.
+        You can contact us by email at <a href="mailto:info@misterprinter.shop">info@misterprinter.shop</a>, or by mail to 10413 W Markham St, Little Rock, AR 72205, USA, United States.
       </p>
       <p>
         These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and MISTERPRINTER LLC, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
@@ -103,10 +103,10 @@ export default function TermsAndConditions() {
       <p>We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We also reserve the right to modify or discontinue all or part of the Services without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.</p>
 
       <h2>13. GOVERNING LAW</h2>
-      <p>These Legal Terms and your use of the Services are governed by and construed in accordance with the laws of the State of North Carolina applicable to agreements made and to be entirely performed within the State of North Carolina, without regard to its conflict of law principles.</p>
+      <p>These Legal Terms and your use of the Services are governed by and construed in accordance with the laws of the State of Arkansas applicable to agreements made and to be entirely performed within the State of Arkansas, without regard to its conflict of law principles.</p>
 
       <h2>14. DISPUTE RESOLUTION</h2>
-      <p>Any legal action of whatever nature brought by either you or us (collectively, the "Parties" and individually, a "Party") shall be commenced or prosecuted in the state and federal courts located in Wake County, North Carolina, and the Parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such state and federal courts.</p>
+      <p>Any legal action of whatever nature brought by either you or us (collectively, the "Parties" and individually, a "Party") shall be commenced or prosecuted in the state and federal courts located in Wake County, Arkansas, and the Parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such state and federal courts.</p>
 
       <h2>15. CORRECTIONS</h2>
       <p>There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.</p>
@@ -116,8 +116,8 @@ export default function TermsAndConditions() {
       <div className="bg-slate-50 p-8 border-2 border-slate-900 shadow-sm not-prose">
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-1">
           <p className="text-slate-900 font-black">MISTERPRINTER LLC</p>
-          <p>722 N West St</p>
-          <p>Raleigh, NC 27603</p>
+          <p>10413 W Markham St</p>
+          <p>Little Rock, AR 72205</p>
           <p>United States</p>
           <p className="pt-4 text-indigo-600 font-black lowercase">Email: info@misterprinter.shop</p>
         </address>

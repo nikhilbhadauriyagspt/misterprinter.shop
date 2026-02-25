@@ -22,11 +22,6 @@ export default function Collections() {
               className="space-y-10"
             >
               <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                   <div className="h-px w-8 bg-indigo-600" />
-                   <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">Curated Node</span>
-                </div>
-
                 <h3 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85]">
                   Elite<br/>
                   <span className="text-indigo-600">Performance.</span>

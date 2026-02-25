@@ -87,7 +87,7 @@ export default function Contact() {
                 <MapPin size={20} strokeWidth={2.5} />
               </div>
               <p className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.3em] mb-2">Office Node</p>
-              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight">722 N West St <br/> Raleigh, NC 27603</h4>
+              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight">10413 W Markham St, Little Rock, AR 72205, USA</h4>
             </div>
 
             <div className="p-10 bg-slate-900 text-white border-2 border-slate-900 shadow-[8px_8px_0px_rgba(79,70,229,0.2)] group overflow-hidden relative">

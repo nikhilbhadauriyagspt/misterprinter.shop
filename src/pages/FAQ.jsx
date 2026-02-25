@@ -133,7 +133,7 @@ export default function FAQ() {
                 <MapPin size={20} strokeWidth={2.5} />
               </div>
               <p className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.3em] mb-2">Office Address</p>
-              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight">722 N West St <br/> Raleigh, NC 27603</h4>
+              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight">10413 W Markham St, Little Rock, AR 72205, USA</h4>
             </div>
 
             {/* Support Box */}

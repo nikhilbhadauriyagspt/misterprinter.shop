@@ -50,7 +50,7 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
       "description": finalDesc,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "722 N West St",
+        "streetAddress": "10413 W Markham St",
         "addressLocality": "Raleigh",
         "addressRegion": "NC",
         "postalCode": "27603",

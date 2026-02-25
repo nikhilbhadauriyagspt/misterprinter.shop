@@ -21,8 +21,8 @@ export default function ReturnPolicy() {
         <address className="not-italic text-slate-900 font-black leading-relaxed uppercase tracking-tighter">
                      MISTERPRINTER LLC<br />          Attn: Returns<br />
           RMA #<br />
-                     722 N West St<br />
-                     Raleigh, NC 27603<br />          United States
+                     10413 W Markham St<br />
+                     Little Rock, AR 72205<br />          United States
         </address>
         <p className="mt-6 text-blue-600 font-black uppercase text-xs tracking-widest">
           Return shipping charges will be paid or reimbursed by us.

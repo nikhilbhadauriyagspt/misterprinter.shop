@@ -157,8 +157,8 @@ export default function CookiePolicy() {
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2 uppercase tracking-tighter">
           <p className="text-slate-900 font-black">MISTERPRINTER LLC</p>
           <p>Authorized HP Partner</p>
-          <p>722 N West St</p>
-          <p>Raleigh, NC 27603</p>
+          <p>10413 W Markham St</p>
+          <p>Little Rock, AR 72205</p>
           <p>United States</p>
           <p className="pt-4 text-blue-600 font-black lowercase">info@misterprinter.shop</p>
         </address>
